@@ -1,8 +1,8 @@
 <?php
 
     session_start();
-   
-
+    if (isset($_POST['data-username'])&&!empty($_POST['data-username'])) {
+        
     $username = strip_tags($_POST['data-username']);
     $mail = strip_tags($_POST['data-mail']);
     $subject = strip_tags($_POST['data-subject']);
@@ -20,5 +20,12 @@
     
      $_SESSION["message"] = "ça marche !";
      header("Location: index.php");
+    }
+    else {
+        $_SESSION["message"] = "ça marche pas";
+        header("Location: index.php");
+    }
+   
+
 
      // eof
