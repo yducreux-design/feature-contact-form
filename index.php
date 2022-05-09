@@ -1,3 +1,6 @@
+    <?php
+    session_start();
+    ?>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -7,6 +10,14 @@
         <title>Document</title>
     </head>
     <body>
+        <p style="color:green">
+    <?php
+    if ($_SESSION) {
+        echo $_SESSION["message"];
+        unset($_SESSION["message"]);
+    }
+    ?>
+    </p>
         <form method="post" action="handler.php">
             <label for="input-username">username:</label>
             <input type="text" name="data-username" id="input-username"> <br>
