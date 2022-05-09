@@ -14,7 +14,7 @@
             <input type="email" name="data-mail" id="input-mail"> <br>
             <label for="input-subject">subject:</label>
             <input type="text" name="data-subject" id="input-subject"> <br>
-            <label for="input-message">message</label>
+            <label for="input-message">message:</label>
             <textarea name="data-message" id="input-message" cols="30" rows="10"></textarea> <br>   
             <input type="submit" name="btn-submit"> 
         </form>
