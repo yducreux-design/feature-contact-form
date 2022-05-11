@@ -11,21 +11,21 @@
     $to      = 'acs.dijon.dwwm.js@gmail.com';
     $headers = 'From: '. $mail . "\r\n" .
     'Reply-To: ' . $mail . "\r\n" .
-     'X-Mailer: PHP/' . phpversion();
+    'X-Mailer: PHP/' . phpversion();
 
-     mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, $headers);
     echo $username;
     echo '<br>';
     echo $message;
     
-     $_SESSION["message"] = "ça marche !";
-     header("Location: index.php");
+    $_SESSION["message"] = "ça marche !";
+    header("Location: index.php");
     }
     else {
         $_SESSION["message"] = "ça marche pas";
         header("Location: index.php");
     }
-   
+
 
 
      // eof
