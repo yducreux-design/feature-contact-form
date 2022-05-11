@@ -17,6 +17,15 @@
     echo $username;
     echo '<br>';
     echo $message;
+
+    require_once("db_connect.php");
+    $sql='INSERT INTO `tbl_contact` (`contact_username`, `contact_mail`, `contact_subject`, `contact_message`) VALUES (:contact_username, :contact_mail, :contact_subject, :contact_message);';
+    $query = $dbh->prepare($sql);
+    $query->bindValue(':contact_username', $username, PDO::PARAM_STR);
+    $query->bindValue(':contact_mail', $mail, PDO::PARAM_STR);
+    $query->bindValue(':contact_subject', $subject, PDO::PARAM_STR);
+    $query->bindValue(':contact_message', $message, PDO::PARAM_STR);
+    $query->execute();
     
     $_SESSION["message"] = "ça marche !";
     header("Location: index.php");
