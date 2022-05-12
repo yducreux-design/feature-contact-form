@@ -6,9 +6,9 @@
     $username = strip_tags($_POST['data-username']);
     $mail = strip_tags($_POST['data-mail']);
     $subject = strip_tags($_POST['data-subject']);
-    $message = "Message from: ".$username.": " .strip_tags($_POST['data-message']);
+    $message = strip_tags($_POST['data-message']);
 
-    $to      = 'acs.dijon.dwwm.js@gmail.com';
+    $to      = 'y.ducreux@codeur.online';
     $headers = 'From: '. $mail . "\r\n" .
     'Reply-To: ' . $mail . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
