@@ -3,10 +3,7 @@
     session_start();
     if (isset($_POST['data-username'])&&!empty($_POST['data-username'])) {
         
-    $username = strip_tags($_POST['data-username']);
-    $mail = strip_tags($_POST['data-mail']);
-    $subject = strip_tags($_POST['data-subject']);
-    $message = strip_tags($_POST['data-message']);
+   
 
     $to      = 'y.ducreux@codeur.online';
     $headers = 'From: '. $mail . "\r\n" .

@@ -13,7 +13,7 @@
     <?php
     if ($_SESSION) {
         echo $_SESSION["message"];
-        unset($_SESSION["message"]);
+        $_SESSION["message"] = "";
     }
     ?>
     </p>
