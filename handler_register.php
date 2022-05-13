@@ -15,11 +15,11 @@
         //   echo "<br>";
         //   echo  $encrypted_password;
         require_once("db_connect.php");
-    $sql='INSERT INTO `tbl_users` (`user_username`, `user_mail`, `user_spassword`) VALUES (:user_username, :user_mail, :user_password);';
+    $sql='INSERT INTO `tbl_users` (`user_username`, `user_mail`, `user_password`) VALUES (:user_username, :user_mail, :user_password);';
     $query = $dbh->prepare($sql);
     $query->bindValue(':user_username', $username, PDO::PARAM_STR);
     $query->bindValue(':user_mail', $mail, PDO::PARAM_STR);
-    $query->bindValue(':user_password', $subject, PDO::PARAM_STR);
+    $query->bindValue(':user_password', $encrypted_password, PDO::PARAM_STR);
     $query->execute();
     
     $_SESSION["message"] = "You are registered";
