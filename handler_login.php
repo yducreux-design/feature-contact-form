@@ -12,11 +12,12 @@ $query = $dbh->prepare($sql);
 $query->bindValue(':user_username', $username, PDO::PARAM_STR);
 $query->execute();
 $hash=$query->fetch();
-var_dump($hash);
+// var_dump($hash);
 
 
 if ( password_verify($password, $hash['user_password']) ) {
     $_SESSION['message'] = 'Vous êtes connecté.';
+    $_SESSION['username'] = $username;
     header('Location: view_contact.php');   
 }else {
     $_SESSION['message'] = 'Le mot de passe est invalide.';
