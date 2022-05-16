@@ -14,7 +14,8 @@
         </p>
        
         <p> <label for="input-confirmation">confirmation :</label>
-            <input type="password" name="data-confirmation" id="input-confirmation"> <br>
+            <input type="password" name="data-confirmation" id="input-confirmation"><br>
+            <span id="message"></span>
         </p>
 <p>
 <input type="submit" value="Enregister">
@@ -23,4 +24,5 @@
 
 
 </form>
+<script src="checkPwdConfirmation.js"></script>
 <?php include("include_footer.php") ?>
