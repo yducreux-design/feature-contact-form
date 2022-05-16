@@ -8,7 +8,8 @@
 
 <p>
 <label for="">Password: </label>
-<input type="password" name="data-password">
+<input type="password" name="data-password" id="hideField">
+<a href="#" id="showPassword">Maintenir pour afficher</a>
 </p>
 
 
@@ -16,5 +17,5 @@
     <input type="submit" value="Login">
 </p>
 </form>
-
+<script src="showHide.js"></script>
 <?php include("include_footer.php") ?>
